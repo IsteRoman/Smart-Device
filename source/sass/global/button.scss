@@ -1,0 +1,28 @@
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 180px;
+  height: 45px;
+  font-size: 14px;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 700;
+  letter-spacing: 5%;
+  line-height: 1;
+  color: $white;
+  text-transform: uppercase;
+  background: none;
+  border: 1px solid $white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: $default-transition;
+}
+
+.button:focus,
+.button:hover {
+  opacity: 0.7;
+}
+
+.button:active {
+  opacity: 0.5;
+}

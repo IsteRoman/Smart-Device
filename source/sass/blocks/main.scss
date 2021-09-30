@@ -1,0 +1,193 @@
+.main {
+  padding-top: 231px;
+  padding-bottom: 278px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-top: 116px;
+    padding-bottom: 163px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding-top: 231px;
+    padding-bottom: 70px;
+  }
+}
+
+.main__block {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main__block::before {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: -140px;
+  right: 40px;
+  width: 670px;
+  height: 641px;
+  background: url("../img/triangles.png") no-repeat;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    top: -140px;
+    right: 0;
+    width: 300px;
+    height: 541px;
+    background: url("../img/triangles-tablet.png") no-repeat;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    top: -200px;
+    right: 0;
+    width: 200px;
+    height: 541px;
+    background: url("../img/triangles-mobile.png") no-repeat;
+  }
+}
+
+.main__block::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 705px;
+  height: 515px;
+  background: url("../img/detail-desctop.png") no-repeat;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    top: -70px;
+    right: 0;
+    width: 250px;
+    height: 340px;
+    background: url("../img/detail-tablet.png") no-repeat;
+    background-size: contain;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    top: -200px;
+    right: calc(50% - 150px);
+    width: 301px;
+    height: 220px;
+    background-size: contain;
+  }
+}
+
+.main__block h1 {
+  margin: 0;
+  margin-bottom: 31px;
+  padding: 0;
+  font-size: 80px;
+  line-height: 1;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: $white;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 70%;
+    min-height: 141px;
+    margin-bottom: 32px;
+    margin-left: 60px;
+    font-size: 60px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    width: 70%;
+    min-height: 94px;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+}
+
+.main__block p {
+  position: relative;
+  max-width: 777px;
+  margin: 0;
+  margin-bottom: 37px;
+  padding: 0;
+  padding-left: 94px;
+  font-size: 22px;
+  line-height: 156.8%;
+  color: $white;
+  text-transform: lowercase;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 80%;
+    min-height: 70px;
+    padding-left: 154px;
+    font-size: 18px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    max-width: 630px;
+    min-height: 70px;
+    margin-bottom: 42px;
+    padding-left: 54px;
+    font-size: 16px;
+  }
+}
+
+.main__block p::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 66px;
+  height: 2px;
+  background-color: $white;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    left: 60px;
+    width: 33px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    left: 0;
+    width: 33px;
+  }
+}
+
+.main__button {
+  display: inline-flex;
+  justify-content: center;
+  max-width: 407px;
+  margin-left: 94px;
+  padding: 17px 28px 14px 28px;
+  font-size: 16px;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  color: $white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: $blue;
+  border-radius: 5px;
+  transition: $default-transition;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    display: none;
+  }
+}
+
+.main__button--mobile-only {
+  display: none;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    display: inline-flex;
+    width: 100%;
+    max-width: unset;
+    margin-left: 0;
+  }
+}
+
+.main__button:focus,
+.main__button:hover {
+  opacity: 0.7;
+}
+
+.main__button:active {
+  opacity: 0.5;
+}

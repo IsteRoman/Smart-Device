@@ -1,0 +1,143 @@
+.benefits {
+  position: relative;
+  padding-top: 109px;
+  padding-bottom: 80px;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-top: 54px;
+    padding-bottom: 24px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    padding-top: 37px;
+    padding-bottom: 40px;
+  }
+}
+
+.benefits::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1346px;
+  background: url("../img/main-triangles-desctop.png") no-repeat;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    left: unset;
+    right: 0;
+    top: 90px;
+    width: 671px;
+    height: 872px;
+    background: url("../img/main-triangles-tablet.png") no-repeat;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    top: 652px;
+    height: 872px;
+    background: url("../img/main-triangles-mobile.png") no-repeat;
+    background-size: contain;
+  }
+}
+
+.benefits__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    flex-direction: column;
+  }
+}
+
+.benefits__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 48.4%;
+  max-width: 570px;
+  min-height: 299px;
+  margin-bottom: 30px;
+  padding: 40px 45px;
+  cursor: pointer;
+  transition: $default-transition;
+  background-color: $white;
+  border: 1px solid $border-gray;
+  border-left: 3px solid $blue;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    width: 47%;
+    min-height: 306px;
+    padding: 24px 27px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    width: 100%;
+    max-width: unset;
+    min-height: 310px;
+    margin-bottom: 20px;
+    padding: 25px 9px 25px 28px;
+  }
+}
+
+.benefits__item:nth-of-type(odd) {
+  margin-right: 30px;
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-right: 0;
+  }
+}
+
+.benefits__icon {
+  fill: $blue;
+}
+
+.benefits__item b {
+  margin: 0;
+  margin-top: 23px;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 24px;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 140.6%;
+  color: $blue;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-top: 14px;
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+}
+
+.benefits__item p {
+  margin: 0;
+  padding: 0;
+}
+
+.benefits__item:focus,
+.benefits__item:hover {
+  background-color: $blue;
+  border-color: $blue;
+}
+
+.benefits__item:focus .benefits__icon,
+.benefits__item:hover .benefits__icon {
+  fill: $white;
+}
+
+.benefits__item:focus b,
+.benefits__item:hover b,
+.benefits__item:focus p,
+.benefits__item:hover p {
+  color: $white;
+}
