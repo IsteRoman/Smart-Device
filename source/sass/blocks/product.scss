@@ -9,7 +9,7 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding-top: 53px;
+    padding-top: 51px;
     padding-bottom: 34px;
   }
 }
@@ -47,7 +47,8 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     min-height: 119px;
-    margin-bottom: 37px;
+    margin-bottom: 40px;
+    padding-left: 8px;
     font-size: 28px;
   }
 }
@@ -170,7 +171,7 @@
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     width: 100%;
     min-height: 256px;
-    padding: 23px 90px 23px 35px;
+    padding: 0 90px 23px 35px;
   }
 }
 

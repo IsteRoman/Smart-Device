@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding-bottom: 65px;
+    padding-bottom: 68px;
   }
 }
 
@@ -67,7 +67,7 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    margin-bottom: 18px;
+    margin-bottom: 22px;
     padding-left: 0;
     font-size: 28px;
   }
@@ -84,8 +84,8 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    margin-bottom: 35px;
-    padding-left: 0;
+    margin-bottom: 42px;
+    padding-left: 2px;
   }
 }
 
@@ -118,7 +118,7 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     display: block;
-    padding-left: 0;
+    padding-left: 2px;
   }
 }
 
@@ -151,7 +151,8 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     margin-top: auto;
-    margin-left: 0;
+    margin-left: 2px;
+    margin-bottom: -3px;
   }
 }
 

@@ -51,6 +51,7 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     flex-direction: column;
+    margin-left: -1px;
   }
 }
 
@@ -78,9 +79,9 @@
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     width: 100%;
     max-width: unset;
-    min-height: 310px;
+    min-height: unset;
     margin-bottom: 20px;
-    padding: 25px 9px 25px 28px;
+    padding: 24px 9px 25px 24px;
   }
 }
 
@@ -114,7 +115,7 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     margin-top: 14px;
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     font-size: 20px;
   }
 }

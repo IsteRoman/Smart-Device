@@ -8,7 +8,7 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    padding-top: 231px;
+    padding-top: 234px;
     padding-bottom: 70px;
   }
 }
@@ -38,9 +38,9 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    top: -200px;
+    top: -222px;
     right: 0;
-    width: 200px;
+    width: 167px;
     height: 541px;
     background: url("../img/triangles-mobile.png") no-repeat;
   }
@@ -70,9 +70,9 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    top: -200px;
-    right: calc(50% - 150px);
-    width: 301px;
+    top: -196px;
+    right: calc(50% - 160px);
+    width: 295px;
     height: 220px;
     background-size: contain;
   }
@@ -104,8 +104,11 @@
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     width: 70%;
     min-height: 94px;
-    margin-bottom: 30px;
+    margin-bottom: 24px;
+    margin-left: 0px;
     font-size: 40px;
+    letter-spacing: 3px;
+    line-height: 1.1;
   }
 }
 
@@ -132,7 +135,7 @@
     max-width: 630px;
     min-height: 70px;
     margin-bottom: 42px;
-    padding-left: 54px;
+    padding-left: 50px;
     font-size: 16px;
   }
 }
@@ -152,7 +155,8 @@
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    left: 0;
+    top: 15px;
+    left: 2px;
     width: 33px;
   }
 }
@@ -192,6 +196,7 @@
     display: inline-flex;
     width: 100%;
     max-width: unset;
+    margin-top: -2px;
     margin-left: 0;
   }
 }
