@@ -4,7 +4,7 @@
   background-color: $special-gray;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-top: 53px;
+    padding-top: 50px;
     padding-bottom: 32px;
   }
 
@@ -40,7 +40,8 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     min-height: 90px;
-    margin-bottom: 46px;
+    margin-bottom: 48px;
+    padding-right: 110px;
     font-size: 32px;
   }
 
@@ -163,7 +164,7 @@
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
     min-height: 256px;
-    padding: 43px 520px 43px 43px;
+    padding: 20px 520px 43px 44px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {

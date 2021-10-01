@@ -11,13 +11,17 @@
   width: 100%;
   height: 1px;
   background-color: $line-gray;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    bottom: 60px;
+  }
 }
 
 .footer::after {
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     content: "";
     position: absolute;
-    bottom: 360px;
+    bottom: 350px;
     left: 0;
     width: 100%;
     height: 1px;
@@ -32,8 +36,8 @@
   background-color: $blue;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-top: 83px;
-    padding-bottom: 103px;
+    padding-top: 80px;
+    padding-bottom: 104px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -127,7 +131,7 @@
     margin-left: 0;
     margin-right: unset;
     padding-right: 62px;
-    padding-left: 67px;
+    padding-left: 65px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -148,6 +152,7 @@
   color: $white;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-bottom: 16px;
     font-size: 32px;
   }
 
@@ -165,7 +170,7 @@
   color: $white;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -191,7 +196,7 @@
   border: 0;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    margin-bottom: 41px;
+    margin-bottom: 44px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -283,7 +288,7 @@
   border: 0;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    margin-top: 44px;
+    margin-top: 45px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -322,6 +327,11 @@
   line-height: 1;
   color: $white-0-8;
   cursor: pointer;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-top: 10px;
+    margin-right: 12px;
+  }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     margin-top: 0;
@@ -382,6 +392,11 @@
   padding-top: 65px;
   padding-bottom: 14px;
 
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    padding-top: 21px;
+    padding-bottom: 14px;
+  }
+
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     flex-direction: column;
     align-items: center;
@@ -435,6 +450,7 @@
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     position: unset;
     order: 3;
+    margin-top: 10px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -523,6 +539,10 @@
 
 .footer__main-info-item--contacts {
   margin-left: auto;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-right: 10px;
+  }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     margin-left: unset;
@@ -700,7 +720,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     order: 2;
-    margin-top: 10px;
+    margin-top: 16px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -734,6 +754,8 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     order: 5;
+    margin-top: 58px;
+    margin-left: 3px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -759,6 +781,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     order: 6;
+    margin-top: 58px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {

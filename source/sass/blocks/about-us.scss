@@ -2,7 +2,7 @@
   padding-bottom: 110px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-bottom: 83px;
+    padding-bottom: 75px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -38,6 +38,8 @@
   background: url("../img/year-2005.png") no-repeat;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    top: -1px;
+    left: -10px;
     width: 251px;
     height: 361px;
     background-size: contain;
@@ -59,8 +61,8 @@
   line-height: 140.6%;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    margin-bottom: 23px;
-    padding-left: 193px;
+    margin-bottom: 26px;
+    padding-left: 185px;
     font-size: 32px;
   }
 
@@ -78,7 +80,7 @@
   padding-left: 180px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-left: 193px;
+    padding-left: 187px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -111,6 +113,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     display: block;
+    padding-left: 187px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -142,7 +145,8 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-top: auto;
-    margin-left: 193px;
+    margin-bottom: 9px;
+    margin-left: 187px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {

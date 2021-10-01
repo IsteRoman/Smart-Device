@@ -5,7 +5,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-top: 54px;
-    padding-bottom: 24px;
+    padding-bottom: 36px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -70,9 +70,9 @@
   border-left: 3px solid $blue;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    width: 47%;
-    min-height: 306px;
-    padding: 24px 27px;
+    width: 47.9%;
+    min-height: unset;
+    padding: 24px 20px 23px 24px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -108,8 +108,8 @@
   color: $blue;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 8px;
+    margin-bottom: 10px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {

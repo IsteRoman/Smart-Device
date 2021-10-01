@@ -3,7 +3,7 @@
   padding-bottom: 278px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-top: 116px;
+    padding-top: 120px;
     padding-bottom: 163px;
   }
 
@@ -30,9 +30,9 @@
   background: url("../img/triangles.png") no-repeat;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    top: -140px;
-    right: 0;
-    width: 300px;
+    top: -127px;
+    right: 5px;
+    width: 310px;
     height: 541px;
     background: url("../img/triangles-tablet.png") no-repeat;
   }
@@ -61,9 +61,9 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    top: -70px;
+    top: -80px;
     right: 0;
-    width: 250px;
+    width: 260px;
     height: 340px;
     background: url("../img/detail-tablet.png") no-repeat;
     background-size: contain;
@@ -94,9 +94,11 @@
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     width: 70%;
     min-height: 141px;
-    margin-bottom: 32px;
-    margin-left: 60px;
+    margin-bottom: 24px;
+    margin-left: 62px;
     font-size: 60px;
+    letter-spacing: 4.1px;
+    line-height: 1.1;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -122,7 +124,7 @@
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     width: 80%;
     min-height: 70px;
-    padding-left: 154px;
+    padding-left: 115px;
     font-size: 18px;
   }
 
@@ -145,7 +147,7 @@
   background-color: $white;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    left: 60px;
+    left: 66px;
     width: 33px;
   }
 
@@ -171,6 +173,12 @@
   background-color: $blue;
   border-radius: 5px;
   transition: $default-transition;
+
+  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-left: 115px;
+    max-width: 379px;
+    letter-spacing: 0.7px;
+  }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     display: none;
