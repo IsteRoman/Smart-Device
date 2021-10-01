@@ -389,22 +389,6 @@
   content: "";
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .footer__block {
   position: relative;
   display: flex;
@@ -425,13 +409,6 @@
   }
 }
 
-
-
-
-
-
-
-
 .footer__logo {
   order: 1;
   width: 220px;
@@ -451,15 +428,6 @@
   margin-top: 1px;
   color: $special-dark;
 }
-
-
-
-
-
-
-
-
-
 
 .footer__social {
   position: absolute;
@@ -518,15 +486,6 @@
 .footer__social-link:active .footer__social-icon {
   opacity: 0.7;
 }
-
-
-
-
-
-
-
-
-
 
 .footer__main-info {
   order: 2;
@@ -695,7 +654,7 @@
 }
 
 .footer__main-info-sub-list--contacts .footer__main-info-sub-item {
-  margin-right: 0px;
+  margin-right: 0;
 }
 
 .footer__main-info-sub-item p,
@@ -708,9 +667,9 @@
   text-transform: unset;
 }
 
-.footer__main-info-sub-list--contacts, .footer__main-info-sub-item p {
+.footer__main-info-sub-list--contacts .footer__main-info-sub-item p {
   font-family: "PTMono", "Arial", sans-serif;
-  letter-spacing: 0px;
+  letter-spacing: 0;
 }
 
 .footer__main-info-sub-link {
@@ -729,22 +688,6 @@
 .footer__main-info-sub-link:active {
   opacity: 0.5;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .footer__protect b,
 .footer__protect p,
