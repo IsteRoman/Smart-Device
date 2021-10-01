@@ -1,5 +1,5 @@
 .main {
-  padding-top: 231px;
+  padding-top: 236px;
   padding-bottom: 278px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
@@ -23,8 +23,8 @@
   content: "";
   z-index: -1;
   position: absolute;
-  top: -140px;
-  right: 40px;
+  top: -204px;
+  right: -3px;
   width: 670px;
   height: 641px;
   background: url("../img/triangles.png") no-repeat;
@@ -50,11 +50,15 @@
   content: "";
   z-index: -1;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -62px;
+  right: -45px;
   width: 705px;
   height: 515px;
   background: url("../img/detail-desctop.png") no-repeat;
+
+  @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
+    opacity: 0.4;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     top: -70px;
@@ -76,14 +80,15 @@
 
 .main__block h1 {
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 36px;
+  margin-left: -5px;
   padding: 0;
   font-size: 80px;
   line-height: 1;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 7px;
+  letter-spacing: 5.9px;
   color: $white;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
@@ -106,7 +111,7 @@
   position: relative;
   max-width: 777px;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 41px;
   padding: 0;
   padding-left: 94px;
   font-size: 22px;
@@ -133,7 +138,7 @@
 .main__block p::before {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 16px;
   left: 0;
   width: 66px;
   height: 2px;
@@ -155,7 +160,7 @@
   justify-content: center;
   max-width: 407px;
   margin-left: 94px;
-  padding: 17px 28px 14px 28px;
+  padding: 20px 28px 19px 28px;
   font-size: 16px;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;

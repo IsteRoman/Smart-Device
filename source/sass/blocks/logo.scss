@@ -1,9 +1,5 @@
 .logo {
-  display: grid;
-  grid-template-areas:
-    "img title"
-    "img text"
-    "img .";
+  display: flex;
   flex-shrink: 0;
   cursor: pointer;
   transition: $default-transition;
@@ -30,13 +26,18 @@
 }
 
 .logo img {
-  grid-area: img;
   margin-right: 16px;
 }
 
-.logo p {
-  grid-area: title;
+.logo__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo__text p {
   margin: 0;
+  margin-bottom: 2px;
   font-size: 25px;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
@@ -44,17 +45,11 @@
   color: $white;
 }
 
-.logo b {
-  grid-area: text;
+.logo__text b {
   margin: 0;
-  padding-top: 3px;
   font-size: 12px;
   font-family: "Roboto", "Arial", sans-serif;
   font-weight: 500;
   line-height: 1;
   color: $special-extra;
-
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    display: none;
-  }
 }

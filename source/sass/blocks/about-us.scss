@@ -31,7 +31,7 @@
 .about-us__block::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 5px;
   left: 0;
   width: 220px;
   height: 317px;
@@ -50,9 +50,9 @@
 
 .about-us__block h2 {
   margin: 0;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
   padding: 0;
-  padding-left: 200px;
+  padding-left: 180px;
   font-size: 36px;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 400;
@@ -72,9 +72,10 @@
 }
 
 .about-us__block p {
+  max-width: 1165px;
   margin: 0;
-  margin-bottom: 20px;
-  padding-left: 200px;
+  margin-bottom: 22px;
+  padding-left: 180px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-left: 193px;
@@ -124,8 +125,8 @@
   justify-content: center;
   min-width: 180px;
   min-height: 45px;
-  margin-top: auto;
-  margin-left: 200px;
+  margin-top: 18px;
+  margin-left: 180px;
   padding: 14px 13px 8px 12px;
   font-size: 14px;
   font-family: "RobotoCondensed", "Arial", sans-serif;
@@ -140,10 +141,12 @@
   transition: $default-transition;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
+    margin-top: auto;
     margin-left: 193px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
+    margin-top: auto;
     margin-left: 0;
   }
 }
