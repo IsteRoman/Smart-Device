@@ -17,147 +17,153 @@
   position: relative;
   display: flex;
   flex-direction: column;
-}
 
-.main__block::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: -204px;
-  right: -3px;
-  width: 670px;
-  height: 641px;
-  background: url("../img/triangles.png") no-repeat;
-
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    top: -127px;
-    right: 5px;
-    width: 310px;
-    height: 541px;
-    background: url("../img/triangles-tablet.png") no-repeat;
+  &::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: -204px;
+    right: -3px;
+    width: 670px;
+    height: 641px;
+    background: url("../img/triangles.png") no-repeat;
   }
 
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    top: -222px;
-    right: 0;
-    width: 167px;
-    height: 541px;
-    background: url("../img/triangles-mobile.png") no-repeat;
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: -62px;
+    right: -45px;
+    width: 705px;
+    height: 515px;
+    background: url("../img/detail-desctop.png") no-repeat;
   }
-}
 
-.main__block::after {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  top: -62px;
-  right: -45px;
-  width: 705px;
-  height: 515px;
-  background: url("../img/detail-desctop.png") no-repeat;
+  h1 {
+    margin: 0;
+    margin-bottom: 36px;
+    margin-left: -5px;
+    padding: 0;
+    font-size: 80px;
+    line-height: 1;
+    font-family: "RobotoCondensed", "Arial", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 5.9px;
+    color: $white;
+  }
+
+  p {
+    position: relative;
+    max-width: 777px;
+    margin: 0;
+    margin-bottom: 41px;
+    padding: 0;
+    padding-left: 94px;
+    font-size: 22px;
+    line-height: 156.8%;
+    color: $white;
+    text-transform: lowercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 0;
+      width: 66px;
+      height: 2px;
+      background-color: $white;
+    }
+  }
 
   @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
-    opacity: 0.4;
+    &::after {
+      opacity: 0.4;
+    }
   }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    top: -80px;
-    right: 0;
-    width: 260px;
-    height: 340px;
-    background: url("../img/detail-tablet.png") no-repeat;
-    background-size: contain;
+    &::before {
+      top: -127px;
+      right: 5px;
+      width: 310px;
+      height: 541px;
+      background: url("../img/triangles-tablet.png") no-repeat;
+    }
+
+    &::after {
+      top: -80px;
+      right: 0;
+      width: 260px;
+      height: 340px;
+      background: url("../img/detail-tablet.png") no-repeat;
+      background-size: contain;
+    }
+
+    h1 {
+      width: 70%;
+      min-height: 141px;
+      margin-bottom: 24px;
+      margin-left: 62px;
+      font-size: 60px;
+      letter-spacing: 4.1px;
+      line-height: 1.1;
+    }
+
+    p {
+      width: 80%;
+      min-height: 70px;
+      padding-left: 115px;
+      font-size: 18px;
+
+      &::before {
+        left: 66px;
+        width: 33px;
+      }
+    }
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    top: -196px;
-    right: calc(50% - 160px);
-    width: 295px;
-    height: 220px;
-    background-size: contain;
-  }
-}
+    &::before {
+      top: -222px;
+      right: 0;
+      width: 167px;
+      height: 541px;
+      background: url("../img/triangles-mobile.png") no-repeat;
+    }
 
-.main__block h1 {
-  margin: 0;
-  margin-bottom: 36px;
-  margin-left: -5px;
-  padding: 0;
-  font-size: 80px;
-  line-height: 1;
-  font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 5.9px;
-  color: $white;
+    &::after {
+      top: -196px;
+      right: calc(50% - 160px);
+      width: 295px;
+      height: 220px;
+      background-size: contain;
+    }
 
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    width: 70%;
-    min-height: 141px;
-    margin-bottom: 24px;
-    margin-left: 62px;
-    font-size: 60px;
-    letter-spacing: 4.1px;
-    line-height: 1.1;
-  }
+    h1 {
+      width: 70%;
+      min-height: 94px;
+      margin-bottom: 24px;
+      margin-left: 0;
+      font-size: 40px;
+      letter-spacing: 3px;
+      line-height: 1.1;
+    }
 
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    width: 70%;
-    min-height: 94px;
-    margin-bottom: 24px;
-    margin-left: 0;
-    font-size: 40px;
-    letter-spacing: 3px;
-    line-height: 1.1;
-  }
-}
+    p {
+      max-width: 630px;
+      min-height: 70px;
+      margin-bottom: 42px;
+      padding-left: 50px;
+      font-size: 16px;
 
-.main__block p {
-  position: relative;
-  max-width: 777px;
-  margin: 0;
-  margin-bottom: 41px;
-  padding: 0;
-  padding-left: 94px;
-  font-size: 22px;
-  line-height: 156.8%;
-  color: $white;
-  text-transform: lowercase;
-
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    width: 80%;
-    min-height: 70px;
-    padding-left: 115px;
-    font-size: 18px;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    max-width: 630px;
-    min-height: 70px;
-    margin-bottom: 42px;
-    padding-left: 50px;
-    font-size: 16px;
-  }
-}
-
-.main__block p::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 0;
-  width: 66px;
-  height: 2px;
-  background-color: $white;
-
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    left: 66px;
-    width: 33px;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    top: 15px;
-    left: 2px;
-    width: 33px;
+      &::before {
+        top: 15px;
+        left: 2px;
+        width: 33px;
+      }
+    }
   }
 }
 
@@ -177,6 +183,18 @@
   background-color: $blue;
   border-radius: 5px;
   transition: $default-transition;
+
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-left: 115px;
@@ -199,13 +217,4 @@
     margin-top: -2px;
     margin-left: 0;
   }
-}
-
-.main__button:focus,
-.main__button:hover {
-  opacity: 0.7;
-}
-
-.main__button:active {
-  opacity: 0.5;
 }

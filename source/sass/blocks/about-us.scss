@@ -17,108 +17,108 @@
   max-width: 1230px;
   min-height: 301px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 220px;
+    height: 317px;
+    background: url("../img/year-2005.png") no-repeat;
+  }
+
+  h2 {
+    margin: 0;
+    margin-bottom: 22px;
+    padding: 0;
+    padding-left: 180px;
+    font-size: 36px;
+    font-family: "RobotoCondensed", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 140.6%;
+  }
+
+  p {
+    max-width: 1165px;
+    margin: 0;
+    margin-bottom: 22px;
+    padding-left: 180px;
+
+    &:last-of-type {
+      display: block;
+    }
+  }
+
+  b {
+    display: none;
+    margin-bottom: 20px;
+    padding-left: 200px;
+    font-size: 16px;
+    font-family: "PTMono", "Arial", sans-serif;
+    font-weight: 400;
+    line-height: 134.4%;
+    color: $gray;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     max-width: unset;
     min-height: 361px;
+
+    &::before {
+      top: -1px;
+      left: -10px;
+      width: 251px;
+      height: 361px;
+      background-size: contain;
+    }
+
+    h2 {
+      margin-bottom: 26px;
+      padding-left: 185px;
+      font-size: 32px;
+    }
+
+    p {
+      padding-left: 187px;
+
+      &:last-of-type {
+        display: none;
+      }
+    }
+
+    b {
+      display: block;
+      padding-left: 187px;
+    }
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     max-width: unset;
     min-height: 477px;
-  }
-}
 
-.about-us__block::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 0;
-  width: 220px;
-  height: 317px;
-  background: url("../img/year-2005.png") no-repeat;
+    &::before {
+      content: none;
+    }
 
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    top: -1px;
-    left: -10px;
-    width: 251px;
-    height: 361px;
-    background-size: contain;
-  }
+    h2 {
+      margin-bottom: 22px;
+      padding-left: 0;
+      font-size: 28px;
+    }
 
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    content: none;
-  }
-}
+    p {
+      margin-bottom: 42px;
+      padding-left: 2px;
 
-.about-us__block h2 {
-  margin: 0;
-  margin-bottom: 22px;
-  padding: 0;
-  padding-left: 180px;
-  font-size: 36px;
-  font-family: "RobotoCondensed", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 140.6%;
+      &:last-of-type {
+        display: none;
+      }
+    }
 
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    margin-bottom: 26px;
-    padding-left: 185px;
-    font-size: 32px;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    margin-bottom: 22px;
-    padding-left: 0;
-    font-size: 28px;
-  }
-}
-
-.about-us__block p {
-  max-width: 1165px;
-  margin: 0;
-  margin-bottom: 22px;
-  padding-left: 180px;
-
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-left: 187px;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    margin-bottom: 42px;
-    padding-left: 2px;
-  }
-}
-
-.about-us__block p:last-of-type {
-  display: block;
-
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    display: none;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    display: none;
-  }
-}
-
-.about-us__block b {
-  display: none;
-  margin-bottom: 20px;
-  padding-left: 200px;
-  font-size: 16px;
-  font-family: "PTMono", "Arial", sans-serif;
-  font-weight: 400;
-  line-height: 134.4%;
-  color: $gray;
-
-  @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    display: block;
-    padding-left: 187px;
-  }
-
-  @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
-    display: block;
-    padding-left: 2px;
+    b {
+      display: block;
+      padding-left: 2px;
+    }
   }
 }
 
@@ -143,6 +143,18 @@
   border-radius: 5px;
   transition: $default-transition;
 
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-top: auto;
     margin-bottom: 9px;
@@ -154,13 +166,4 @@
     margin-left: 2px;
     margin-bottom: -3px;
   }
-}
-
-.about-us__link:focus,
-.about-us__link:hover {
-  opacity: 0.7;
-}
-
-.about-us__link:active {
-  opacity: 0.5;
 }

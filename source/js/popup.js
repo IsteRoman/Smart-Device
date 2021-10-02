@@ -1,23 +1,29 @@
+import { body } from  './start.js';
 const ESC_CODE = 27;
-const body = document.querySelector('body');
 const buttonOpenModal = document.querySelector('.header__popup-button');
-const overlay = document.querySelector('.overlay');
 const popupForm = document.querySelector('.popup__form');
 const buttonCloseModal = document.querySelector('.popup__button-close');
 
-const checkJS = () => {
-  body.classList.remove('no-js');
+const closeBlock = () => {
+  body.classList.remove('popup--open');
+};
+
+const closeByOverlay = () => {
+  if (body.classList.contains('popup--open')) {
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.popup') === null && e.target.closest('.header__popup-button') === null) {
+        closeBlock();
+      }
+    });
+  }
 };
 
 const openPopup = () => {
   buttonOpenModal.addEventListener('click', () => {
     body.classList.add('popup--open');
     popupForm.children[1].focus();
+    closeByOverlay();
   });
-};
-
-const closeBlock = () => {
-  body.classList.remove('popup--open');
 };
 
 const closeByEsc = () => {
@@ -34,18 +40,10 @@ const closeByButton = () => {
   });
 };
 
-const closeByOverlay = () => {
-  overlay.addEventListener('click', () => {
-    closeBlock();
-  });
-};
-
-const workHeader = () => {
-  checkJS();
+const workPopup = () => {
   openPopup();
   closeByEsc();
   closeByButton();
-  closeByOverlay();
 };
 
-export {workHeader};
+export {workPopup};

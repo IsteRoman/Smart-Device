@@ -1,12 +1,19 @@
-import {workHeader} from './popup.js';
+import {checkJS} from './start.js';
+import {workPopup} from './popup.js';
 import {workForm} from './validation.js';
 import {workAccordion} from './accordion.js';
 
 const err = 1;
 
+if (document.querySelector('body')) {
+  checkJS();
+} else {
+  err + 1;
+}
 
-if(document.querySelector('.header')) {
-  workHeader();
+
+if(document.querySelector('.popup')) {
+  workPopup();
 } else {
   err + 1;
 }

@@ -2,27 +2,43 @@
 /******/ 	"use strict";
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./source/js/popup.js
-const ESC_CODE = 27;
+;// CONCATENATED MODULE: ./source/js/start.js
 const body = document.querySelector('body');
-const buttonOpenModal = document.querySelector('.header__popup-button');
-const overlay = document.querySelector('.overlay');
-const popupForm = document.querySelector('.popup__form');
-const buttonCloseModal = document.querySelector('.popup__button-close');
 
 const checkJS = () => {
   body.classList.remove('no-js');
+};
+
+
+
+
+;// CONCATENATED MODULE: ./source/js/popup.js
+
+const ESC_CODE = 27;
+const buttonOpenModal = document.querySelector('.header__popup-button');
+const popupForm = document.querySelector('.popup__form');
+const buttonCloseModal = document.querySelector('.popup__button-close');
+
+const closeBlock = () => {
+  body.classList.remove('popup--open');
+};
+
+const closeByOverlay = () => {
+  if (body.classList.contains('popup--open')) {
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.popup') === null && e.target.closest('.header__popup-button') === null) {
+        closeBlock();
+      }
+    });
+  }
 };
 
 const openPopup = () => {
   buttonOpenModal.addEventListener('click', () => {
     body.classList.add('popup--open');
     popupForm.children[1].focus();
+    closeByOverlay();
   });
-};
-
-const closeBlock = () => {
-  body.classList.remove('popup--open');
 };
 
 const closeByEsc = () => {
@@ -39,18 +55,10 @@ const closeByButton = () => {
   });
 };
 
-const closeByOverlay = () => {
-  overlay.addEventListener('click', () => {
-    closeBlock();
-  });
-};
-
-const workHeader = () => {
-  checkJS();
+const workPopup = () => {
   openPopup();
   closeByEsc();
   closeByButton();
-  closeByOverlay();
 };
 
 
@@ -123,17 +131,16 @@ const workForm = () => {
 
 ;// CONCATENATED MODULE: ./source/js/accordion.js
 const accordionList = document.querySelectorAll('.footer__main-info-item');
-const accordionButton = document.querySelectorAll('.footer__main-info-button');
 
 const workAccordion = () => {
-  accordionButton.forEach((el) => {
-    el.addEventListener('click', (evt) => {
-      accordionList.forEach((list) => {
-        if (list !== evt.target.parentElement) {
-          list.classList.remove('footer__main-info-item--open');
+  accordionList.forEach((element) => {
+    element.addEventListener('click', (event) => {
+      element.classList.toggle('footer__main-info-item--open');
+      accordionList.forEach((el) => {
+        if (el !== event.currentTarget) {
+          el.classList.remove('footer__main-info-item--open');
         }
       });
-      el.parentElement.classList.toggle('footer__main-info-item--open');
     });
   });
 };
@@ -145,11 +152,18 @@ const workAccordion = () => {
 
 
 
+
 const err = 1;
 
+if (document.querySelector('body')) {
+  checkJS();
+} else {
+  err + 1;
+}
 
-if(document.querySelector('.header')) {
-  workHeader();
+
+if(document.querySelector('.popup')) {
+  workPopup();
 } else {
   err + 1;
 }
