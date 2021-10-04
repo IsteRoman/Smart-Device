@@ -94,7 +94,6 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     max-width: unset;
-    min-height: 477px;
 
     &::before {
       content: none;

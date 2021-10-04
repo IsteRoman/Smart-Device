@@ -21,6 +21,8 @@ const workForm = () => {
     const name = el.querySelector('input[type="text"]');
     const tel = el.querySelector('input[type="tel"]');
     const button = el.querySelector('.button-submit');
+    const agree = el.querySelector('input[type="checkbox"]');
+    const agreeLabel = agree.nextElementSibling;
     el.addEventListener('change', () => {
       name.addEventListener('blur', () => {
         if (name.value.length < MIN_NAME_LENGTH) {
@@ -40,6 +42,13 @@ const workForm = () => {
         }
         if (tel.value.length === ZERO_VALUE) {
           removeError(tel);
+        }
+      });
+      agreeLabel.addEventListener('blur', () => {
+        if (!agree.checked) {
+          agreeLabel.style.color = 'red';
+        } else if (agree.checked) {
+          agreeLabel.removeAttribute('style');
         }
       });
       button.addEventListener('click', (evt) => {

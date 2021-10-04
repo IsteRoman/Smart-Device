@@ -3,7 +3,7 @@
   padding-bottom: 278px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-top: 120px;
+    padding-top: 114px;
     padding-bottom: 163px;
   }
 
@@ -78,8 +78,18 @@
   }
 
   @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
+    &::before {
+      right: 0;
+      width: 660px;
+      height: 641px;
+    }
+
     &::after {
-      opacity: 0.4;
+      top: 50px;
+      right: 0;
+      width: 280px;
+      height: 215px;
+      background-size: contain;
     }
   }
 

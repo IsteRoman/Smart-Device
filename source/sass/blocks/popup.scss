@@ -6,8 +6,10 @@
   display: none;
   flex-direction: column;
   width: 490px;
+  height: 605px;
   padding: 30px 39px 40px 39px;
   background-color: $blue;
+  overflow-y: auto;
 
   h2 {
     margin: 0;
@@ -87,7 +89,7 @@
     }
 
     &:focus::placeholder {
-      opacity: 0;
+      opacity: 0.5;
     }
   }
 

@@ -23,15 +23,17 @@
     <header class="header">
       <div class="header__block wrapper">
         <a class="header__logo logo logo--on-main-page">
-          <img src="img/logo.svg" width="52" height="52" alt="Smart Device">
-          <div class="header__logo-text logo__text">
-            <p>Smart Device</p>
-            <b>умные технологии</b>
-          </div>
+          <!-- 1х: 202px; 2x: 401px -->
+          <picture>
+            <source media="(max-width: 767px)" srcset="img/logo.svg">
+
+            <source srcset="img/logo-header.webp 1x, img/logo-header@2x.webp 2x" type="image/webp">
+            <img src="img/logo-header.png" srcset="img/logo-header@2x.png" width="202" height="52" alt="Smart Device">
+          </picture>
         </a>
         <ul class="header__contacts">
           <li class="header__contacts-item">
-            <a class="header__contacts-link" href="info@sd.ru" aria-label="Напишите нам">
+            <a class="header__contacts-link" href="mailto:info@sd.ru" aria-label="Напишите нам">
               <svg class="header__contacts-icon header__contacts-icon-mail" width="19" height="14" viewBox="0 0 19 14">
                 <use href="#icon-mail"></use>
               </svg>
@@ -152,11 +154,11 @@
       </div>
       <div class="footer__block wrapper">
         <a class="footer__logo logo logo--on-main-page">
-          <img src="img/logo.svg" width="52" height="52" alt="Smart Device">
-          <div class="footer__logo-text logo__text">
-            <p>Service Device</p>
-            <b>умные технологии</b>
-          </div>
+          <!-- 1х: 216px; 2x: 430px -->
+          <picture>
+            <source srcset="img/logo-footer.webp 1x, img/logo-footer@2x.webp 2x" type="image/webp">
+            <img src="img/logo-footer.png" srcset="img/logo-footer@2x.png" width="216" height="52" alt="Service Device">
+          </picture>
         </a>
         <ul class="footer__social">
           <li class="footer__social-item">
@@ -214,6 +216,43 @@
               <li class="footer__main-info-sub-item">
                 <a class="footer__main-info-sub-link" href="#">Контакты</a>
               </li>
+
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Контакты</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Контакты</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Контакты</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Контакты</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Контакты</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Доставка</a>
+              </li>
+              <li class="footer__main-info-sub-item">
+                <a class="footer__main-info-sub-link" href="#">Контакты</a>
+              </li>
             </ul>
           </li>
           <li class="footer__main-info-item footer__main-info-item--contacts">
@@ -255,22 +294,22 @@
     <div class="popup">
       <h2>Закажите звонок</h2>
       <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-      <button class="popup__button-close" type="button" aria-label="закрыть">
+      <button class="popup__button-close" type="button" aria-label="закрыть" tabindex="7">
         <svg class="popup__button-close-icon" width="16.5" height="16.5">
           <use href="#icon-close"></use>
         </svg>
       </button>
-      <form class="popup__form" method="GET" action="https://echo.htmlacademy.ru/">
+      <form class="popup__form" method="GET" action="https://echo.htmlacademy.ru/"tabindex="1" >
         <label class="visually-hidden" for="user_name_popup" aria-label="Введите ваше имя"></label>
-        <input id="user_name_popup" name="user-name-popup" type="text" placeholder="Имя" required>
+        <input id="user_name_popup" name="user-name-popup" type="text" placeholder="Имя" required tabindex="2">
         <label class="visually-hidden" for="user_phone_popup" aria-label="Введите ваш номер телефона"></label>
-        <input id="user_phone_popup" name="user-phone-popup" type="tel" placeholder="Телефон" required>
+        <input id="user_phone_popup" name="user-phone-popup" type="tel" placeholder="Телефон" required tabindex="3">
         <label class="visually-hidden" for="user_question_popup" aria-label=""></label>
-        <textarea id="user_question_popup" placeholder="Ваш вопрос"></textarea>
-        <button class="popup__button button button-submit" type="submit">Отправить</button>
+        <textarea id="user_question_popup" placeholder="Ваш вопрос" tabindex="4"></textarea>
+        <button class="popup__button button button-submit" type="submit" tabindex="6">Отправить</button>
         <fieldset class="popup__agree">
           <input type="checkbox" id="user_agree_popup" name="user-agree-popup" required checked>
-          <label for="user_agree_popup" tabindex="0">Я согласен на обработку  персональных данных</label>
+          <label for="user_agree_popup" tabindex="5">Я согласен на обработку  персональных данных</label>
         </fieldset>
       </form>
     </div>

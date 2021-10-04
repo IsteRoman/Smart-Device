@@ -15,12 +15,14 @@ const checkJS = () => {
 ;// CONCATENATED MODULE: ./source/js/popup.js
 
 const ESC_CODE = 27;
+const TAB_CODE = 9;
 const buttonOpenModal = document.querySelector('.header__popup-button');
 const popupForm = document.querySelector('.popup__form');
 const buttonCloseModal = document.querySelector('.popup__button-close');
 
 const closeBlock = () => {
   body.classList.remove('popup--open');
+  body.removeAttribute('style');
 };
 
 const closeByOverlay = () => {
@@ -33,10 +35,24 @@ const closeByOverlay = () => {
   }
 };
 
+const tabFocusRestrictor = () => {
+  window.addEventListener('keydown', (evt) => {
+    const focused = document.activeElement;
+    console.log(focused)
+    if (focused === buttonCloseModal && evt.keyCode === TAB_CODE) {
+      console.log('a')
+      popupForm.focus();
+      console.log('b')
+    }
+  });
+};
+
 const openPopup = () => {
   buttonOpenModal.addEventListener('click', () => {
     body.classList.add('popup--open');
     popupForm.children[1].focus();
+    body.style.overflow = 'hidden';
+    tabFocusRestrictor();
     closeByOverlay();
   });
 };
@@ -87,6 +103,8 @@ const workForm = () => {
     const name = el.querySelector('input[type="text"]');
     const tel = el.querySelector('input[type="tel"]');
     const button = el.querySelector('.button-submit');
+    const agree = el.querySelector('input[type="checkbox"]');
+    const agreeLabel = agree.nextElementSibling;
     el.addEventListener('change', () => {
       name.addEventListener('blur', () => {
         if (name.value.length < MIN_NAME_LENGTH) {
@@ -106,6 +124,13 @@ const workForm = () => {
         }
         if (tel.value.length === ZERO_VALUE) {
           removeError(tel);
+        }
+      });
+      agreeLabel.addEventListener('blur', () => {
+        if (!agree.checked) {
+          agreeLabel.style.color = 'red';
+        } else if (agree.checked) {
+          agreeLabel.removeAttribute('style');
         }
       });
       button.addEventListener('click', (evt) => {

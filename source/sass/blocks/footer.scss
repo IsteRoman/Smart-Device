@@ -105,7 +105,10 @@
 
   @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
     &::after {
-      opacity: 0.5;
+      top: 70px;
+      left: 0;
+      width: 411px;
+      height: 288px;
     }
   }
 
@@ -212,6 +215,7 @@
     outline: 0;
     transition: $default-transition;
     resize: none;
+    border-radius: 0;
 
     &::placeholder {
       color: $white;
@@ -259,6 +263,7 @@
     padding: 12px 14px;
     color: $white;
     border: 2px solid transparent;
+    border-radius: 0;
     background-color: $white-0-1;
     outline: 0;
     transition: $default-transition;
@@ -446,15 +451,6 @@
   }
 }
 
-.footer__logo-text {
-  margin-left: -1px;
-
-  p {
-    margin-top: 1px;
-    color: $special-dark;
-  }
-}
-
 .footer__social {
   position: absolute;
   top: 170px;
@@ -483,6 +479,7 @@
 .footer__social-item {
   width: 27px;
   height: 27px;
+  margin-bottom: 10px;
 
   &:not(:nth-of-type(3n)) {
     margin-right: 14px;
@@ -492,7 +489,6 @@
 .footer__social-link {
   width: 27px;
   height: 27px;
-  margin-bottom: 10px;
   cursor: pointer;
   border-radius: 50%;
   transition: $default-transition;
@@ -525,10 +521,11 @@
 .footer__main-info {
   order: 2;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-grow: 1;
   min-width: 700px;
   max-width: 990px;
+  flex-wrap: wrap;
   margin: 0;
   margin-left: auto;
   padding: 0;
