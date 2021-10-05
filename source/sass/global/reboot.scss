@@ -35,6 +35,10 @@ body {
   }
 }
 
+.popup--open {
+  height: 100%;
+}
+
 .popup--open::before {
   content: "";
   position: absolute;

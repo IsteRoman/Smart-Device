@@ -6,7 +6,8 @@
   display: none;
   flex-direction: column;
   width: 490px;
-  height: 605px;
+  height: calc(100% - 50px);
+  max-height: 605px;
   padding: 30px 39px 40px 39px;
   background-color: $blue;
   overflow-y: auto;
