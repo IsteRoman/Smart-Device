@@ -1,5 +1,5 @@
 .main {
-  padding-top: 236px;
+  padding-top: 231px;
   padding-bottom: 278px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
@@ -224,7 +224,7 @@
     display: inline-flex;
     width: 100%;
     max-width: unset;
-    margin-top: -2px;
+    margin-top: 0;
     margin-left: 0;
   }
 }

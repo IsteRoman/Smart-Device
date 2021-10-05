@@ -16,7 +16,7 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     padding-top: 54px;
-    padding-bottom: 36px;
+    padding-bottom: 28px;
 
     &::before {
       left: unset;
@@ -30,7 +30,7 @@
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     padding-top: 37px;
-    padding-bottom: 40px;
+    padding-bottom: 34px;
 
     &::before {
       top: 652px;
@@ -126,8 +126,8 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     width: 47.9%;
-    min-height: unset;
-    padding: 24px 20px 23px 24px;
+    min-height: 232px;
+    padding: 24px 20px 26px 24px;
 
     b {
       margin-top: 8px;
@@ -138,9 +138,13 @@
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     width: 100%;
     max-width: unset;
-    min-height: unset;
+    min-height: 233px;
     margin-bottom: 20px;
-    padding: 24px 9px 25px 24px;
+    padding: 24px 15px 29px 24px;
+
+    &:nth-of-type(2) {
+      padding-right: 8px;
+    }
 
     &:nth-of-type(odd) {
       margin-right: 0;

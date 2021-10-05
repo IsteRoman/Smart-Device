@@ -38,11 +38,8 @@ const closeByOverlay = () => {
 const tabFocusRestrictor = () => {
   window.addEventListener('keydown', (evt) => {
     const focused = document.activeElement;
-    console.log(focused)
     if (focused === buttonCloseModal && evt.keyCode === TAB_CODE) {
-      console.log('a')
       popupForm.focus();
-      console.log('b')
     }
   });
 };

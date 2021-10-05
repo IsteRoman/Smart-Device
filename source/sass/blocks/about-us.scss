@@ -1,8 +1,8 @@
 .about-us {
-  padding-bottom: 110px;
+  padding-bottom: 111px;
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
-    padding-bottom: 75px;
+    padding-bottom: 74px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -106,7 +106,7 @@
     }
 
     p {
-      margin-bottom: 42px;
+      margin-bottom: 48px;
       padding-left: 2px;
 
       &:last-of-type {
@@ -116,6 +116,7 @@
 
     b {
       display: block;
+      margin-bottom: 33px;
       padding-left: 2px;
     }
   }
