@@ -10,9 +10,22 @@ const popup = document.querySelector('.popup');
 const popupForm = document.querySelector('.popup__form');
 const buttonCloseModal = document.querySelector('.popup__button-close');
 
+const ChaingePopupHeight = () => {
+  const height = window.innerHeight - DELTA;
+  if (HEIGHT_ZERO_POINT < window.innerHeight < HEIGHT_MAX_POINT) {
+    popup.style.height = `${height}px`;
+    popup.style.top = `${HEIGHT_TOP}px`;
+  }
+  if (window.innerHeight >= HEIGHT_MAX_POINT) {
+    popup.removeAttribute('style');
+  }
+};
+
 const closeBlock = () => {
   body.classList.remove('popup--open');
   body.removeAttribute('style');
+  popup.removeAttribute('style');
+  window.removeEventListener('resize', ChaingePopupHeight);
 };
 
 const closeByOverlay = () => {
@@ -39,15 +52,7 @@ const openPopup = () => {
     body.classList.add('popup--open');
     popupForm.children[1].focus();
     body.style.overflow = 'hidden';
-    const height = window.innerHeight - DELTA;
-    if (HEIGHT_ZERO_POINT < window.innerHeight < HEIGHT_MAX_POINT) {
-      popup.style.height = `${height}px`;
-      popup.style.top = `${HEIGHT_TOP}px`;
-    }
-
-    if (window.innerHeight >= HEIGHT_MAX_POINT) {
-      popup.removeAttribute('style');
-    }
+    window.addEventListener('resize', ChaingePopupHeight);
     tabFocusRestrictor();
     closeByOverlay();
   });
