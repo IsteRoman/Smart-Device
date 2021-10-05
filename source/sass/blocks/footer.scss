@@ -521,18 +521,21 @@
 .footer__main-info {
   order: 2;
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   flex-grow: 1;
   min-width: 700px;
-  max-width: 990px;
-  flex-wrap: wrap;
   margin: 0;
   margin-left: auto;
   padding: 0;
   list-style: none;
 
+  @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
+    width: 700px;
+  }
+
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     order: 4;
+    justify-content: space-between;
     min-width: unset;
     max-width: unset;
     width: 100%;
@@ -586,7 +589,11 @@
 }
 
 .footer__main-info-item--contacts {
-  margin-left: auto;
+  margin-left: 117px;
+
+  @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
+    margin-left: 141px;
+  }
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     margin-right: 10px;
@@ -650,8 +657,6 @@
 .footer__main-info-sub-list {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  height: 100px;
   margin: 0;
   margin-left: -1px;
   padding: 0;
@@ -659,13 +664,11 @@
 
   @media (min-width: $tablet-width) and (max-width: $max-tablet-width) {
     flex-wrap: nowrap;
-    height: unset;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
     display: none;
     flex-wrap: nowrap;
-    height: unset;
     padding-bottom: 29px;
 
     .no-js & {
@@ -678,9 +681,16 @@
   }
 }
 
-.footer__main-info-sub-item {
-  margin-right: 74px;
+.footer__main-info-sub-list--site-section {
+  @media (min-width: $desktop-width) {
+    display: block;
+    column-count: 2;
+    column-gap: 74px;
+  }
+}
 
+
+.footer__main-info-sub-item {
   p {
     margin: 0;
     padding: 0;
@@ -703,10 +713,6 @@
       color: $special-gray-0-5;
       text-transform: unset;
     }
-  }
-
-  @media (min-width: $desktop-width) and (max-width: $desktop-mid-width) {
-    margin-right: 35px;
   }
 
   @media (min-width: $mobile-width) and (max-width: $max-mobile-width) {
@@ -737,7 +743,7 @@
 .footer__protect {
   order: 3;
   display: flex;
-  margin-top: 71px;
+  margin-top: 75px;
   margin-right: 142px;
 
   b {
@@ -794,7 +800,7 @@
 .footer__privacy-terms {
   order: 4;
   margin: 0;
-  margin-top: 71px;
+  margin-top: 75px;
   padding: 0;
   font-size: 13px;
   line-height: 1.84;
@@ -832,7 +838,7 @@
 .footer__developer {
   display: flex;
   order: 5;
-  margin-top: 71px;
+  margin-top: 75px;
   margin-left: auto;
 
   b {
