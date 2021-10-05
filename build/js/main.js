@@ -16,7 +16,12 @@ const checkJS = () => {
 
 const ESC_CODE = 27;
 const TAB_CODE = 9;
+const HEIGHT_ZERO_POINT = 0;
+const HEIGHT_MAX_POINT = 710;
+const HEIGHT_TOP = 50;
+const DELTA = 100;
 const buttonOpenModal = document.querySelector('.header__popup-button');
+const popup = document.querySelector('.popup');
 const popupForm = document.querySelector('.popup__form');
 const buttonCloseModal = document.querySelector('.popup__button-close');
 
@@ -49,6 +54,15 @@ const openPopup = () => {
     body.classList.add('popup--open');
     popupForm.children[1].focus();
     body.style.overflow = 'hidden';
+    const height = window.innerHeight - DELTA;
+    if (HEIGHT_ZERO_POINT < window.innerHeight < HEIGHT_MAX_POINT) {
+      popup.style.height = `${height}px`;
+      popup.style.top = `${HEIGHT_TOP}px`;
+    }
+
+    if (window.innerHeight >= HEIGHT_MAX_POINT) {
+      popup.removeAttribute('style');
+    }
     tabFocusRestrictor();
     closeByOverlay();
   });
